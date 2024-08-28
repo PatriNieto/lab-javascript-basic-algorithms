@@ -22,3 +22,25 @@ if(hacker1.length === hacker2.length){
 }
 
 // Iteration 3: Loops
+let hacker1UpperCase = ""
+for (let i = 0; i<hacker1.length; i++){
+    hacker1UpperCase += hacker1[i].toUpperCase() + " " //hay un espacio detrás de la I que queremos quitar
+//tenemos que hacer un slice(hacker1.kength-1)
+} console.log(hacker1UpperCase)
+
+// BONUS 1
+let longText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a ante a sem consequat feugiat. Nunc cursus arcu lectus, non laoreet massa tempor eget. Proin mollis, orci ut porta sodales, erat purus egestas nunc, et facilisis lacus orci non erat. Pellentesque ultricies nunc quis ligula pulvinar dapibus. Donec at dui enim. Fusce ante velit, sodales vitae metus vitae, accumsan ornare felis. Nam quis leo bibendum, scelerisque neque sed, ultricies est. Vivamus placerat lorem ligula, ac laoreet quam blandit nec. Nunc consequat risus nec quam eleifend hendrerit. Nam risus leo, ullamcorper in lectus id, feugiat mattis nisi. Pellentesque posuere augue non lacus lobortis, eu pellentesque urna pulvinar. Praesent dictum felis sit amet massa lacinia, et luctus diam tristique. Nulla in lectus nec nisi bibendum fringilla ac ac dui. In mollis lacus nunc, ac dictum elit ornare id. Donec suscipit erat sit amet volutpat egestas. Integer vitae magna pellentesque, malesuada sapien at, hendrerit nibh. Phasellus sem est, ullamcorper et pharetra eget, ultrices nec magna. Donec et nisi sit amet augue elementum venenatis. Curabitur sodales diam sit amet massa placerat, nec ornare nunc sodales. Pellentesque in efficitur magna, sed scelerisque diam. Etiam porta est diam, a aliquet enim lacinia sed. Aenean ex turpis, hendrerit in molestie non, porta in nisi. Sed porta venenatis sem sed porta. Nulla in scelerisque turpis, sit amet fermentum est. Morbi ac porttitor neque, volutpat interdum tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Proin et interdum nulla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed dignissim commodo turpis eget vestibulum. Maecenas ut tortor eleifend tortor lobortis auctor. Donec fermentum dui id elit vestibulum suscipit. Integer quis malesuada mauris."
+
+let count = 0
+for (let i = 0; i<longText.length; i++){
+    if (longText[i] === " "){
+        count ++
+    }
+}console.log(count +1)
+
+let countEt = 0
+for (let i = 0; i<longText.length; i++){
+    if (longText[i]+longText[i+1] === "et"){
+        countEt ++
+    }
+}console.log(countEt)
