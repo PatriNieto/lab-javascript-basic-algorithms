@@ -36,15 +36,20 @@ for(let i = hacker2.length - 1; i >=0; i--) {
 console.log(reverseHacker);
 
 //3.3 Depending on the lexicographic order of the strings, print:
-if (hacker1[0] > hacker2[0]) {
+
+
+
+if (hacker1.localeCompare(hacker2) === 1 ){
     console.log("Yo, the navigator goes first, definitely.");
-} else if(hacker1[0] < hacker2[0]) {
+} else if (hacker1.localeCompare(hacker2) === -1) {
     console.log("The driver's name goes first.");
-} else if (hacker1[0] === hacker2[0])  {
+} else if (hacker1 === hacker2 ) {
     console.log("What?! You both have the same name?");
 } else {
     console.log("Don't forget to write the team names");
 }
+
+
 
 
 
@@ -72,15 +77,27 @@ for (let i = 0; i<longText.length; i++){
 }console.log(countEt)
 
 // BONUS 2
-let phraseToCheck ="A man, a plan, a canal, Panama!";
-let reversedPhrase = "";
-for(let i = phraseToCheck.length - 1; i >=0; i--) {
-    reversedPhrase += phraseToCheck[i];
-} 
-if(reversedPhrase === phraseToCheck){
 
+//aqui le quitamos los espacios y caracteres de las frases de ejemplo
+let phraseToCheck ="Hola buenos días";
+let trimPhraseToCheck = phraseToCheck.split(" ").join(""); 
+trimPhraseToCheck = trimPhraseToCheck.split(",").join(""); 
+trimPhraseToCheck = trimPhraseToCheck.split("!").join(""); 
+trimPhraseToCheck = trimPhraseToCheck.split("?").join("");
+trimPhraseToCheck = trimPhraseToCheck.split("'").join(""); 
+
+// aqui le damos la vuelta al texto sin espacios y sin signos de puntuación
+let reversedPhrase = "";
+for(let i = trimPhraseToCheck.length - 1; i >=0; i--) {
+    reversedPhrase += trimPhraseToCheck[i];
+} 
+
+//comparamos las dos cadenas en minuscula 
+if( reversedPhrase.toLowerCase() === trimPhraseToCheck.toLowerCase() ){
+    console.log("Palindromo!");
+} else {
+    console.log("No es palindromo!");
 }
-console.log(reversedPhrase);
 
 
 
